@@ -11,7 +11,7 @@ Se compone de tres componentes basicos, OBSERVABLE, METODO QUE AVISA LOS CAMBIOS
 Un código síncrono es aquel código donde cada instrucción espera a la anterior para ejecutarse mientras que un código asíncrono no espera a las instrucciones diferidas y continúa con su ejecución. Por lo general la asincronía permite tener una mejor respuesta en las aplicaciones y reduce el tiempo de espera del cliente.
 
 
-1.1.1 Síncrono
+1.1.1 Síncrono <br>
 Cada instrucción se ejecutará en secuencia hasta terminar.
 ~~~
 console.log('Primero'); 
