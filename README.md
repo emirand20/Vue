@@ -2,12 +2,12 @@
 
 # 1. Conceptos Basicos
 
-1. Programacion Reactiva
+1. Programacion Reactiva <br>
 Es un PARADIGMA DE PROGRAMACION ASÍNCRONA orientado al FLUJO DE DATOS y PROPAGACION DEL CAMBIO. 
 Se compone de tres componentes basicos, OBSERVABLE, METODO QUE AVISA LOS CAMBIOS Y OBSERVER (nosotros como clientes).
 
 
-1.1 Sincrono y Asíncronio
+1.1 Sincrono y Asíncronio <br>
 Un código síncrono es aquel código donde cada instrucción espera a la anterior para ejecutarse mientras que un código asíncrono no espera a las instrucciones diferidas y continúa con su ejecución. Por lo general la asincronía permite tener una mejor respuesta en las aplicaciones y reduce el tiempo de espera del cliente.
 
 
