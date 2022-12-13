@@ -41,3 +41,8 @@ VUE utiliza una sintaxis de plantilla basada en HTML que permite vincular declar
 Todas las platillas de Vue son HTML sintacticas válidas.<br>
 Vue compila las plantillas de Js altamente optimizado. <br>
 Combiando con al reactividad. Vue es capaz de calcular la cantidad minima de componentes a realizar y aplicar la cantidad minima de manipulaciones en el DOM.
+~~~
+<template>
+    <h1>Hola Vue 3!<h1>
+</template>
+~~~
