@@ -11,7 +11,7 @@ Se compone de tres componentes basicos, OBSERVABLE, METODO QUE AVISA LOS CAMBIOS
 Un código síncrono es aquel código donde cada instrucción espera a la anterior para ejecutarse mientras que un código asíncrono no espera a las instrucciones diferidas y continúa con su ejecución. Por lo general la asincronía permite tener una mejor respuesta en las aplicaciones y reduce el tiempo de espera del cliente.
 
 
-### 1.1.1 Síncrono <br>
+### Síncrono <br>
 Cada instrucción se ejecutará en secuencia hasta terminar.
 ~~~
 console.log('Primero'); 
@@ -19,7 +19,7 @@ console.log('Segundo');
 console.log('Tercero');
 ~~~
 
-### 1.1.2 Asíncrono <br>
+### Asíncrono <br>
 En el caso asícrono, algunas de las instrucciones se ejecutarán a destiempo.
 ~~~
 console.log('Primero');
@@ -37,6 +37,7 @@ No saber cuando van a suceder esos cambios tanto en la vista como en el codigo, 
 
 # API COMPOSER
 ## SINTAXIS DE PLANTILLA
-VUE utiliza una sintaxis de plantilla basada en HTML que permite vincular declarativamente el DOM.
-Todas las platillas de Vue son HTML sintacticas válidas
-Vue 
+VUE utiliza una sintaxis de plantilla basada en HTML que permite vincular declarativamente el DOM.<br>
+Todas las platillas de Vue son HTML sintacticas válidas.<br>
+Vue compila las plantillas de Js altamente optimizado. <br>
+Combiando con al reactividad. Vue es capaz de calcular la cantidad minima de componentes a realizar y aplicar la cantidad minima de manipulaciones en el DOM.
