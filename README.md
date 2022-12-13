@@ -35,8 +35,8 @@ Son todos aquellos datos cuyas llamadas haran que estos datos cambien gracias a 
 ## 1.3 Propagacion del cambio <br>
 No saber cuando van a suceder esos cambios tanto en la vista como en el codigo, cada uno de ellos ha de estar cmunicado.
 
-# API COMPOSER
-## SINTAXIS DE PLANTILLA
+# Composer API
+## Sintaxis de plantilla
 VUE utiliza una sintaxis de plantilla basada en HTML que permite vincular declarativamente el DOM.<br>
 Todas las platillas de Vue son HTML sintacticas válidas.<br>
 Vue compila las plantillas de Js altamente optimizado. <br>
@@ -45,4 +45,19 @@ Combiando con al reactividad. Vue es capaz de calcular la cantidad minima de com
 <template>
     <h1>Hola Vue 3!<h1>
 </template>
+~~~
+## Interpolación de texto
+Bigotes es una forma de insertar valores en una plantilla
+~~~
+<script setup>
+const name = "Vue 3"
+</script>
+<template>
+  <h1>{{name}}</h1>
+</template>
+~~~
+## Enlaces de atributos
+Los bigotes no se pueden insertar dentro de los atributos HTML. En su lugar utilice una una 'v-bind' para elazar un valor del atributo.
+~~~
+
 ~~~

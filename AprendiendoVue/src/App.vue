@@ -1,6 +1,13 @@
-<script setup></script>
+<script setup>
+const name = "Vue 3"
+const styleColor = "color: green"
+</script>
+
 <template>
-  <h1>Vue</h1>
+  <div>
+  <h1>Esto es {{name}}</h1>
+  <h2 v-bind="styleColor">Este texto es de color verde</h2>
+  </div>
 </template>
 <style>
 h1{
