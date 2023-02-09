@@ -1,3 +1,18 @@
+<template>
+  <div class="container">
+    <img src=./assets/logo.svg alt="logo vue" width="125" height="125 "/>
+    <small>
+      <h1>Hola mundo desde Vue.js 3</h1>
+    </small>
+    <hr />
+
+    <h2>Contador {{ contador }}</h2>
+    <button @click="suma">+1</button>
+    <button @click="resta">-1</button>V
+    <button @click="reset">reset</button>
+  </div>
+</template>
+
 <script>
 export default {
   data: () => ({
@@ -16,20 +31,6 @@ export default {
   },
 };
 </script>
-<template>
-  <div class="container">
-    <img src=./assets/logo.svg alt="logo vue" width="125" height="125 "/>
-    <small>
-      <h1>Hola mundo desde Vue.js 3</h1>
-    </small>
-    <hr />
-
-    <h2>Contador {{ contador }}</h2>
-    <button @click="suma">+1</button>
-    <button @click="resta">-1</button>V
-    <button @click="reset">reset</button>
-  </div>
-</template>
 
 <style scoped>
 small {
