@@ -1,22 +1,18 @@
 <template>
-  <h1>Vue</h1>
-  <hr />
-  <!--<span v-text="'Hola mundo'"></span>-->
-  <h2>Tu edad es: {{ edad }}</h2>
-  <h3 v-show="edad >= 18 ">Eres mayor</h3>
-  <span v-show="edad < 18 ">Eres menor</span>
-
-  <!--<div v-html="html">
-  </div>-->
+  <div class="container mt-3">
+    <Header /> 
+    <Form />
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue"
+import Form from "./components/Form.vue"
+
 export default {
-  data(){
-    return{
-      edad: 19,
-      //html: '<h3>hola</h3>'
-    }
+  components: {
+    Header,
+    Form
   }
 }
 </script>
@@ -29,5 +25,12 @@ body {
   background-color: #4C566A;
   font-family: 'Lato', sans-serif;
   color: white;
+}
+
+.contador {
+  background-color: rgb(8, 99, 96);
+  color: snow;
+  font-weight: bold;
+  height: 400px;
 }
 </style>
