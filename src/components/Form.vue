@@ -2,7 +2,7 @@
   <form @submit.prevent="registerProject()">
     <div class="mb-3">
       <label for="form-label">Project</label>
-      <input v-model.trim="project" type="text" class="form-control" required />
+      <input v-model.trim="nameProject" type="text" class="form-control" required />
     </div>
     <div class="mb-3">
       <label for="form-label">Activity</label>
@@ -20,12 +20,28 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <hr />
-  <pre>
-        PROJECT: {{ project }} 
-        TYPE: {{ type }} 
-        CHECKBOX: {{ checkbox }}
-    </pre
-  >
+  <h3>All Projects: {{ nameProject }}</h3>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Project</th>
+          <th>Type</th>
+          <th>Urgent</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="(project, index) in projects" :key="index">
+          <td>{{ index + 1}}</td>
+          <td>{{ project.project }}</td>
+          <td>{{ project.type}}</td>
+          <td :class=" project.checkbox ? 'bg-success' : 'bg-danger' ">{{ project.checkbox ? "SI" : "NO" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -34,11 +50,27 @@ export default {
     project: "",
     type: "",
     checkbox: false,
+    projects: [],
   }),
   methods: {
     registerProject() {
-      console.log(this.project);
+      const project = {
+        project: this.project,
+        type: this.type,
+        checkbox: this.checkbox,
+      }
+
+      this.projects.push(project)
+
+      this.project = ""
+      this.type = ""
+      this.checkbox = false
     },
   },
+  computed: {
+    nameProject(){
+      return this.projects.length
+    }
+  }
 };
 </script>
