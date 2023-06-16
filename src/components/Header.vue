@@ -3,9 +3,9 @@
       <div class="col-12 col-md-5">
         <h1>Form</h1>
       </div>
-      <div class="col-12 col-md-6">
+      <!--<div class="col-12 col-md-6">
         <img width="100" :src="url" alt="logo-vue">
-      </div>
+      </div>-->
     </div>
     <hr />
 </template>
