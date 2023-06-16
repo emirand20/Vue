@@ -16,21 +16,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-body {
-  text-align: center;
-  background-color: #4C566A;
-  font-family: 'Lato', sans-serif;
-  color: white;
-}
-
-.contador {
-  background-color: rgb(8, 99, 96);
-  color: snow;
-  font-weight: bold;
-  height: 400px;
-}
-</style>
