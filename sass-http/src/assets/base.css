@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&family=Lato&family=Noto+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  color: snow;
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: 30px;
+  border: solid 3px snow;
+  border-radius: 5px;
+}/*# sourceMappingURL=base.css.map */

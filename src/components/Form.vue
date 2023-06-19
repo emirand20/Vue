@@ -7,12 +7,7 @@
       <form @submit.prevent="registerProject()">
         <div class="mb-3">
           <label for="form-label">Project</label>
-          <input
-            v-model.trim="project"
-            type="text"
-            class="form-control"
-            required
-          />
+          <input v-model.trim="project" type="text" class="form-control" required />
         </div>
         <div class="mb-3">
           <label for="form-label">Activity</label><br />
@@ -31,7 +26,13 @@
       </form>
     </div>
     <div class="col-12 col-md-8">
-      <all-projects :numProjects="numProjects" :projects="projects" :changeCompleted="changeCompleted" :changeState="changeState"/>
+      <all-projects 
+        :numProjects="numProjects" 
+        :projects="projects" 
+        :changeCompleted="changeCompleted"
+        :changeState="changeState" 
+        :clearProjects="clearProjects"
+        />
     </div>
   </div>
 </template>
@@ -60,6 +61,7 @@ export default {
       };
 
       this.projects.push(project);
+      this.saveData()
 
       this.project = "";
       this.type = "";
@@ -68,10 +70,18 @@ export default {
     },
     changeState(id) {
       this.projects[id].checkbox = !this.projects[id].checkbox;
+      this.saveData()
     },
     changeCompleted(id) {
       this.projects[id].completed = !this.projects[id].completed;
     },
+    saveData() {
+      localStorage.setItem('projects', JSON.stringify(this.projects))
+    },
+    clearProjects() {
+      this.projects = []
+      localStorage.clear
+    }
   },
   computed: {
     numProjects() {
@@ -87,5 +97,8 @@ export default {
       return (complet * 100) / this.numProjects || 0;
     },
   },
+  mounted() {
+    this.projects = JSON.parse(localStorage.getItem('projects')) || []
+  }
 };
 </script>
