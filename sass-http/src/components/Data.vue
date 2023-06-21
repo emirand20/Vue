@@ -12,5 +12,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    cripto:{
+      type: String,
+      required: true
+    },
+    moneda:{
+      type: String,
+      required: true
+    },
+    img:{
+      type: String,
+      required: true
+    },
+    price:{
+      type: String,
+      required: true
+    },
+  }
+};
 </script>

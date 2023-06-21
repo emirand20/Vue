@@ -1,18 +1,18 @@
 <template>
   <div>
-    <form>
+    <form @submit.prevent="$emit( 'infoMonedas', cripto, moneda )">
       <div>
         <label> Moneda Nacional: </label>
-        <select required>
+        <select v-model="moneda" required>
           <option value="" disabled selected>Seleccione una moneda</option>
           <option>MXN</option>
           <option>USD</option>
           <option>EUR</option>
-        </select>
+        </select> 
       </div>
       <div>
         <label> Criptomoneda: </label>
-        <select required>
+        <select v-model="cripto" required>
           <option value="" disabled selected>Seleccione una Criptomoneda</option>
           <option>BTC</option>
           <option>ETH</option>
@@ -30,5 +30,10 @@
 import Form from "../../../src/components/Form.vue";
 export default {
   components: { Form },
+  data: () => ({
+    moneda: '',
+    cripto: '',
+  }),
+
 };
 </script>
