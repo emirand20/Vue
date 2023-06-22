@@ -3,7 +3,7 @@
     <h1>Cotizador de Criptomonedas</h1>
     <grid>
       <formulario @info-monedas="get" />
-      <Data :cripto="info.cripto" />
+      <Data :cripto="info.cripto" :moneda="info.moneda" :img="info.img" :price="info.price"/>
     </grid>
   </div>
 </template>
@@ -29,9 +29,20 @@ export default {
       const res = await fetch(
         `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${encodeURI(cripto)}&tsyms=${encodeURI(moneda)}`
       )
-      const data = await res.json()
+
+      //desestructuracion de obj
+      const { RAW } = await res.json()
+      const dataCripto = RAW[cripto] 
+      const data = dataCripto[moneda]    
+
       console.log(data)
-    },
+      this.info.cripto = cripto
+      this.info.moneda = moneda
+      this.info.img = data.IMAGEURL
+      this.info.price = data.PRICE
+
+
+      },
 
   },
 };
