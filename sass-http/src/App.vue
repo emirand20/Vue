@@ -6,13 +6,15 @@
       <Data :cripto="info.cripto" :moneda="info.moneda" :img="info.img" :price="info.price"/>
     </grid>
   </div>
+  <reload-prompt />
 </template>
 
 <script>
 import Formulario from "./components/Formulario.vue";
 import Data from "./components/Data.vue";
-import GridVue from "./components/Grid.vue";
 import Grid from "./components/Grid.vue";
+import ReloadPrompt from "./components/ReloadPrompt.vue";
+
 
 export default {
   components: { Formulario, Data, Grid },
